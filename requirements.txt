@@ -1,0 +1,4 @@
+numpy>=2.0
+sympy>=1.14
+pytest>=8
+# torch: install the CUDA build matching your driver, e.g. the cu128 wheel used here.

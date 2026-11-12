@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cube-solving-pipeline"
+version = "0.1.0"
+description = "Algebra-guided and learned search for twisty puzzles (Maltese Gear Cube first)."
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.0",
+    "sympy>=1.14",
+]
+
+[project.optional-dependencies]
+gpu = ["torch>=2.2"]   # on Colab, torch is preinstalled; locally install the CUDA build for your driver
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["core*", "puzzles*"]
